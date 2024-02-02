@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Icon from '@iconify/svelte';
-	import map from '$lib/images/map_eat_resized.png';
+	import map from '$lib/images/map_fashion_resized.png';
 	export let showStats = false;
 
 	let img: HTMLImageElement, imgBounds: DOMRect;
@@ -166,13 +166,13 @@
 	function onMouseUp() {
 		isComparing = false;
 	}
-	
+
 	function onTouchStart() {
 		showZoom = true;
 		moveComparismImage();
 	}
 	function onTouchEnd() {
-		showZoom=false;
+		showZoom = false;
 		isComparing = false;
 	}
 
@@ -196,9 +196,8 @@
 		moveComparismImage();
 	}
 </script>
-
 <div
-	class="overflow-hidden relative border border-gray-200 max-w-max rounded-md w-full user-select-none"
+	class="overflow-hidden relative max-w-max rounded-md w-full user-select-none"
 >
 	<div
 		on:touchstart={onTouchStart}
@@ -221,7 +220,7 @@
 			alt="High resolution business monkey "
 			bind:this={img}
 			draggable="false"
-			class="aspect-square w-full md:max-w-[600px] user-select-none"
+			class="aspect-square w-full md:max-w-[1080px] user-select-none"
 			on:wheel={onMouseWheel}
 		/>
 	</div>
@@ -241,32 +240,6 @@
 		</div>
 	{/if}
 </div>
-<div class="flex gap-2 mt-4">
-	<button
-		class:bg-red-500={isComparing}
-		class:text-white={isComparing}
-		on:click={compare}
-		aria-label="Compare button"
-		class="text-sm border px-4 py-2 rounded-md border-gray-200">Check Original Image</button
-	>
-
-	<button
-		on:click={zoomIn}
-		aria-label="Click to Zoom In "
-		class="border p-2 grid place-items-center rounded-md border-gray-200 hover:bg-red-500 hover:text-white"
-	>
-		<Icon icon="ic:baseline-zoom-in" class="text-2xl " />
-	</button>
-
-	<button
-		on:click={zoomOut}
-		aria-label="Click to Zoom Out"
-		class="border p-2 grid place-items-center rounded-md border-gray-200 hover:bg-red-500 hover:text-white"
-	>
-		<Icon icon="ic:baseline-zoom-out" class="text-2xl " />
-	</button>
-</div>
-
 {#if showStats}
 	<div
 		class="mt-4 text-gray-800 border border-gray-200 max-w-max px-4 py-2 rounded-md"
@@ -300,8 +273,11 @@
 {/if}
 
 <style>
+	div{
+		margin: auto;
+	}
 	.comparism_image {
-		--background-image: url('$lib/images/map_eat_resized.png');
+		--background-image: url('$lib/images/map_fashion.png');
 		--width: 400px;
 		--height: 400px;
 		--left: 0%;
@@ -314,7 +290,7 @@
 		background-image: var(--background-image);
 	}
 	.magnifying_glass {
-		--background-image: url('$lib/images/map_eat.png');
+		--background-image: url('$lib/images/map_fashion.png');
 		--left: 0%;
 		--top: 0%;
 		--width: 400px;

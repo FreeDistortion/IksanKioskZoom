@@ -1,5 +1,5 @@
 <script>
-	import ImageLoupe from '$lib/loupe/ImageLoupe.svelte';
+	import ImageLoupe from '$lib/loupe/EatLoupe.svelte';
 </script>
 
 <main>
@@ -11,10 +11,10 @@
 		<a href="/">
 			<div class="come-back-home"></div>
 		</a>
-		<a href="/csite">
+		<a href="/about/bsite">
 			<div class="come-back-home prev"></div>
 		</a>
-		<a href="/bsite">
+		<a href="/about/asite">
 			<div class="come-back-home next"></div>
 		</a>
 	</div>
@@ -60,14 +60,13 @@
 	}
 	.prev {
 		background-image: url('$lib/images/iconPrev.png');
-		width: 400px;
-		/* width: 350px; */
+		width: 350px;
 		left: 18%;
 		transform: translate(-50%, -0%);
 	}
 	.next {
 		background-image: url('$lib/images/iconNext.png');
-		width: 400px;
+		width: 350px;
 		left: 82%;
 		transform: translate(-50%, -0%);
 	}

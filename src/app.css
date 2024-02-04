@@ -1,3 +1,178 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+	main {
+		margin-left: -28px;
+		text-align: center;
+		/* overflow: hidden; */
+	}
+	button {
+		float: left;
+		height: auto;
+	}
+	.store-container {
+
+		background-color: rgb(252, 249, 244, 1);
+		/* background-color: rgb(255, 0, 0, 0.3); */
+		/* height: 450px; */
+	}
+
+	.pagination-controls {
+		display: flex;
+		justify-content: space-between;
+		/* width: 100%; */
+		margin: 25px 0;
+	}
+
+	.pagination-controls button {
+		margin: 0 5px; /* 버튼 사이의 간격 */
+		/* background-color: rgb(0, 255, 0, 0.3); */
+	}
+	.row {
+		display: flex;
+		justify-content: center;
+		margin: 10px 0;
+	}
+	.item-container{
+		width:800px;
+	}
+	.item {
+		width: calc(100% / 1); /* 한 행의 아이템 수 n에 따라 조정 */
+		height: 70px;
+		padding: 10px;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		border: 1px solid #ccc; /* 시각화를 위한 스타일 */
+	}
+	.main-container {
+        background-image: url('$lib/images/subBackImg.png');
+
+        background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		width: 1080px;
+		height: 1920px;
+	}
+    .detail-main-container{
+        
+        background-image: url('$lib/images/detailBackImg.png');
+    }
+	.contents-container {
+		position: absolute;
+		/* background-image: url('$lib/images/map_full_resized.png'); */
+		/* background: hsl(239, 100%, 50%); */
+		width: 1080px;
+		height: 1200px;
+		left: 50%;
+		top: 160px;
+		transform: translate(-50%, 0%);
+	}
+	.come-back-home {
+		background-image: url('$lib/images/iconComeBackHome.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		
+		position: absolute;
+		/* background: #42ff00; */
+		width: 400px;
+		height: 150px;
+		left: 50%;
+		top: 90%;
+		transform: translate(-50%, -0%);
+	}
+	.prev {
+		background-image: url('$lib/images/iconPrev.png');
+		width: 350px;
+		left: 18%;
+		transform: translate(-50%, -0%);
+	}
+	.next {
+		background-image: url('$lib/images/iconNext.png');
+		width: 350px;
+		left: 82%;
+		transform: translate(-50%, -0%);
+	}
+	.prev-store {
+		background-image: url('$lib/images/icon_prev_store.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.next-store {
+		background-image: url('$lib/images/icon_next_store.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+    .go-to-heaven {
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		background-size: 0;
+	}
+	.asite {
+		background-image: url('$lib/images/icon_fashion.png');
+		background-color: rgba(255, 36, 156, 0.3);
+		width: 577px;
+		height: 437px;
+		left: 0px;
+		top: 295px;
+		transform: inherit translate(-50%, -50%);
+
+		clip-path: polygon(35.3% 0, 100% 39.9%, 59.4% 100%, 0 62.5%, 0 47%);
+	}
+	.bsite {
+		background-image: url('$lib/images/icon_culture.png');
+		background-color: rgba(157, 44, 255, 0.3);
+		height: 330px;
+		width: 380px;
+		left: 350px;
+		top: 469px;
+		transform: inherit translate(-50%, -50%);
+
+		clip-path: polygon(61.4% 0, 100% 20.3%, 38% 100%, 0 80%);
+	}
+
+	.csite {
+		background-image: url('$lib/images/icon_eat.png');
+		background-color: rgba(255, 59, 44, 0.3);
+		height: 428px;
+		width: 580px;
+		right: 0px;
+		top: 510px;
+		transform: inherit translate(-50%, -50%);
+		clip-path: polygon(45% 0, 100% 31%, 100% 38.7%, 59.2% 100%, 0 66.5%);
+	}
+	.icon {
+		background-size: 100px;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+	}
+	.icon::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: white;
+		opacity: 0; /* 시작은 투명하게 */
+		z-index: 1; /* 요소 위에 표시 */
+		animation: sparkling-animation 3s infinite; /* 애니메이션 지속 시간과 반복 설정 */
+	}
+
+	@keyframes sparkling-animation {
+		0%,
+		100% {
+			opacity: 0.1; /* 애니메이션 시작과 끝에서는 투명하게 */
+		}
+		50% {
+			opacity: 0.4; /* 애니메이션 중간에서 최대 밝기 */
+		}
+	}

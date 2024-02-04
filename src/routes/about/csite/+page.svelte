@@ -1,7 +1,8 @@
 <script lang="ts">
-	import ImageLoupe from '$lib/loupe/CultureLoupe.svelte';
+	import ImageLoupe from '$lib/loupe/EatLoupe.svelte';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
+	import Duple from '$lib/common/AboutSitesDuplicatedThings.svelte';
 	export function paginate<T>(
 		array: T[],
 		pageSize: number,
@@ -37,7 +38,7 @@
 	if (browser) {
 		onMount(async () => {
 			try {
-				const response = await fetch('/cultureList.txt');
+				const response = await fetch('/eatList.txt');
 				if (!response.ok) {
 					throw new Error('Failed to fetch data');
 				}
@@ -100,15 +101,16 @@
 					</button>
 				</div>
 			</div>
+
 		</div>
 
 		<a href="/">
 			<div class="come-back-home"></div>
 		</a>
-		<a href="/about/asite">
+		<a href="/about/bsite">
 			<div class="come-back-home prev"></div>
 		</a>
-		<a href="/about/csite">
+		<a href="/about/asite">
 			<div class="come-back-home next"></div>
 		</a>
 	</div>

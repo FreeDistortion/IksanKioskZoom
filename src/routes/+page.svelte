@@ -85,9 +85,9 @@
   </main>
   
   <style>
-	main {
-		margin-left: -28px;
-		text-align: center;
+	button{
+		float: unset;
+		height: unset;
 	}
 	.slider-container{
 		background-image: url('$lib/images/mainBackImg.png');
@@ -97,7 +97,7 @@
 		position: relative;
 		width: 1080px;
 		height: 1920px;
-		
+
 	}
 	.container {
 	  padding-top: 104px;
@@ -111,7 +111,6 @@
 	  display: flex;
 	  position: relative;
 	  transition: left 0.5s;
-  
 	}
 	.slider img {
 	  width: 100%;
@@ -135,14 +134,14 @@
 	  background-color: rgba(255, 255, 255, 0.7);
 	  cursor: pointer;
 	}
-  
+
 	.papagination {
 	  position: absolute;
 	  bottom: 0;
 	  padding-bottom: 8px;
 	  width: 100%;
 	}
-  
+
 	.papagination button {
 	  margin: 0 4px;
 	  width: 14px;
@@ -157,4 +156,3 @@
 	  background-color: rgba(255, 0, 0, 0.8);
 	}
   </style>
-  

@@ -34,6 +34,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"express": "^4.18.2",
 		"svelte-magnifier": "^0.0.1",
 		"zoomist": "^2.0.11"
 	}

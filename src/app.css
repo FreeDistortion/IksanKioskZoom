@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 	main {
-		margin-left: -28px;
+		margin-left: -19px;
 		text-align: center;
-		/* overflow: hidden; */
 	}
 	button {
 		float: left;

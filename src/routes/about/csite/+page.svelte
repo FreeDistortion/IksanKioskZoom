@@ -2,7 +2,6 @@
 	import ImageLoupe from '$lib/loupe/EatLoupe.svelte';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	import Duple from '$lib/common/AboutSitesDuplicatedThings.svelte';
 	export function paginate<T>(
 		array: T[],
 		pageSize: number,

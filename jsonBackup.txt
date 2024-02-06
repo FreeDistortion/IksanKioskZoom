@@ -1,16 +1,17 @@
 {
-	"name": "IksanKioskZoom",
+	"name": "svelte-image-diff",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "cross-env NODE_ENV=dev npm run dev:all",
-		"dev:all": "concurrently -n=svelte,electron -c='#ff3e00',blue \"npm run dev:svelte\" \"npm run dev:electron\"",
-		"dev:svelte": "vite dev",
-		"dev:electron": "electron src/electron.cjs",
-		"build": "cross-env NODE_ENV=production npm run build:svelte && npm run build:electron",
-		"build:svelte": "vite build",
-		"build:electron": "electron-builder -mwl --config build.config.json"
-		
+		"dev": "vite dev --host 0.0.0.0",
+		"build": "vite build",
+
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+
 	},
 	"devDependencies": {
 		"@iconify/svelte": "^3.1.4",
@@ -19,10 +20,6 @@
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"autoprefixer": "^10.4.16",
-		"concurrently": "^8.2.2",
-		"cross-env": "^7.0.3",
-		"electron-reloader": "^1.2.3",
-		"electron-window-state": "^5.0.3",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-svelte": "^2.30.0",

@@ -12,7 +12,7 @@
     }
     timeoutId = setTimeout(() => {
       goto('/');
-    }, 600*1000); // 60초 후에 /about으로 이동
+    }, 60*1000); // 60초 후에 /about으로 이동
   };
 
   if (browser) {
@@ -35,7 +35,9 @@
     });
   }
 
-
+  document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+  });
 
 
 

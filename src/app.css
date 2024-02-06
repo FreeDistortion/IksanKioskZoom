@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
 	main {
 		margin-left: -19px;
 		text-align: center;

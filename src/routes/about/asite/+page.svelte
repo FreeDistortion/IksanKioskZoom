@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ImageLoupe from '$lib/loupe/FashionLoupe.svelte';
-	import duples from '$lib/common/AboutSitesDuplicatedThings.svelte';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	export function paginate<T>(
